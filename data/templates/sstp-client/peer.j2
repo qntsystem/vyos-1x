@@ -12,7 +12,7 @@ remotename {{ ifname }}
 linkname   {{ ifname }}
 ipparam    {{ ifname }}
 ifname     {{ ifname }}
-pty "sstpc --ipparam {{ ifname }} --nolaunchpppd {{ server }}:{{ port }} --ca-cert {{ ca_file_path }}"
+pty "sstpc --cert-warn --ipparam {{ ifname }} --nolaunchpppd {{ server }}:{{ port }} --ca-cert {{ ca_file_path }}"
 
 # Override any connect script that may have been set in /etc/ppp/options.
 connect /bin/true
